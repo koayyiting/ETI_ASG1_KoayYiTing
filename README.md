@@ -37,7 +37,7 @@ Run the following .exe file
 - console.exe
 From this you can start using the Application
 
-Database Setup Queries:
+Database Setup Queries: <br>
 CREATE USER 'user'@'localhost' IDENTIFIED BY 'password';
 GRANT ALL ON *.* TO 'user'@'localhost';
 
