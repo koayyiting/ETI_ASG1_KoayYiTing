@@ -4,9 +4,9 @@ Application Description:
 This carpooling platform uses microservices to manage passengers, car owners and trips. Passengers create accounts and join published trips, while car owners define trips, manage seats (first-come-first-serve), and cancel trip 30 minutes before start time. Users can access past trips and update profiles, with car owners providing additional driver's license and car details. After 1 year of inactivity, users can delete accounts, but data is retained for audit purposes.
 
 Microservices <br>
-Passenger Service: This service focus solely on managing passenger data and actions, such as sign-up, login, profile updates, passenger trip enrollment, and delete account. <br>
+Passenger Service: This service focus solely on managing passenger data and actions, such as sign-up, login, profile updates, change to car owner, passenger trip enrollment, and delete account. <br>
 Trip Service: This service handle trip creation, getting trip list, and cancelling trips. <br>
-Carowner Service: This service manages carowner data and actions, such as car registration, update account, and delete account. <br>
+Carowner Service: This service manages carowner data and actions, such as update account, and delete account. <br>
 
 Factors and Constraints <br>
 User Experience: <br>
