@@ -5,8 +5,8 @@ This carpooling platform uses microservices to manage passengers, car owners and
 
 Microservices <br>
 Passenger Service: This service focus solely on managing passenger data and actions, such as sign-up, login, profile updates, change to car owner, passenger trip enrollment, and delete account. <br>
-Trip Service: This service handle getting trip list, and cancelling trips. <br>
-Carowner Service: This service manages carowner data and actions, such as update account, trip creation, and delete account. <br>
+Trip Service: This service handle getting trip list, trip creation, and cancelling trips. <br>
+Carowner Service: This service manages carowner data and actions, such as update account, and delete account. <br>
 
 Factors and Constraints <br>
 User Experience: <br>
