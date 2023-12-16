@@ -67,3 +67,14 @@ CREATE TABLE TripPassenger(
     FOREIGN KEY (TripID) REFERENCES Trip(TripID),
     FOREIGN KEY (PassengerID) REFERENCES Passenger(ID)
 );
+
+CREATE TABLE Trip (
+    TripID varchar(36) NOT NULL PRIMARY KEY,
+    CarOwnerID varchar(36),
+    PickUpAddress varchar(255),
+    AlternativeAddress varchar(255),
+    StartTime datetime,
+    Destination varchar(255),
+    PaxLimit int,
+    FOREIGN KEY (CarOwnerID) REFERENCES CarOwner(UserID)
+);
