@@ -72,13 +72,13 @@ Database (version1): This stores all the application data, including passenger i
 
 Instructions to setup
 =====================
-Microservices Setup: (can be found under /microservices/ folder) <br>
+Microservices Setup: (can be found under [/microservices/](https://github.com/koayyiting/ETI_ASG1_KoayYiTing/tree/main/microservices) folder) <br>
 Run the following .exe files
 - carowner.exe
 - passenger.exe
 - trip.exe
 
-User Interface Setup: <br>
+User Interface Setup: (can be found under [/microservices/](https://github.com/koayyiting/ETI_ASG1_KoayYiTing/tree/main/microservices) folder) <br>
 Run the following .exe file
 - console.exe <br>
 From this you can start using the Application
@@ -127,6 +127,8 @@ CREATE TABLE Trip (
     FOREIGN KEY (CarOwnerID) REFERENCES CarOwner(UserID)
 );
 ```
+This DB Setup code can be found in [/db_setup.sql](https://github.com/koayyiting/ETI_ASG1_KoayYiTing/blob/main/db_setup.sql)
+
 ### Examples to test: (Deletion of Accounts)
 #### Test if Passenger can delete Account (after 1 year)
 Passenger Details: Phone No. = 91010101, Email = koay@gmail.com
