@@ -22,7 +22,7 @@ Example: (Login function) <br>
 - Means: if passenger.exe not running Car Owner user can still login into the car pool platform
 
 ### Constraints:
-Scalability                    - Did not have time to test Web service
+Platform Used                  - Did not have time to test Web service
 
 ### Assumptions:
 System only allows 1 registed phone number and email <br> <br>
@@ -65,6 +65,10 @@ Architecture Diagram
 ====================
 ![image](https://github.com/koayyiting/ETI_ASG1_KoayYiTing/assets/93900494/5ddff562-a0c9-4ac7-8d04-82fe48b5269d)
 
+#### Description
+Client Application (Console): This is the user interface where passengers and car owners interact with the platform. It acts as a client that utilizes the API Gateway for communication. <br>
+Microservices: I have designed three main microservices: Passenger, Trip, and Carowner. Each microservice exposes a set of endpoints (GET, POST, PUT, DELETE) corresponding to specific functionalities within its domain. These endpoints act as the "API Gateway" in this context. <br>
+Database (version1): This stores all the application data, including passenger information, car owner details, trip data, and passenger-trip relationships using MySQL. The database tables (Passenger, CarOwner, Trip, and TripPassenger) represent the entities and their relationships. <br>
 
 Instructions to setup
 =====================
