@@ -76,7 +76,7 @@ Run the following .exe files
 
 User Interface Setup: <br>
 Run the following .exe file
-- console.exe
+- console.exe <br>
 From this you can start using the Application
 
 Database Setup Queries: <br>
