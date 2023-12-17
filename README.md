@@ -19,6 +19,7 @@ Microservice architecture      - Created 3 microservices (Passenger, Car Owner, 
 They are designed to be loosely cooupled but working together. <br>
 Example: (Login function) <br>
 - Both the Passenger and CarOwner allows user login. (For Car owner to login by itself, the user needs to be upgraded to Car Owner first)
+- Means: if passenger.exe not running Car Owner user can still login into the car pool platform
 
 ### Constraints:
 Scalability                    - Did not have time to test Web service
@@ -26,7 +27,7 @@ Scalability                    - Did not have time to test Web service
 ### Assumptions:
 System only allows 1 regiested phone number and email <br> <br>
 Passenger can update account to Car Owner <br>
-Passenger can enrol Trips (same passenger can enrol multiple time of the same trip, as they can help family and friends to enrol) <br>
+Passenger can enrol Trips <br>
 Passenger account can be deleted (after 1 year of registration) and enrolled trips will be deleted <br> <br>
 Car Owner can publish Trips <br>
 Car Owner account can be deleted (after 1 year of registration) this include all the published trip by the car owner will be deleted (which also means passengers that is enrolled to the carowner's trip will be deleted) <br> <br>
