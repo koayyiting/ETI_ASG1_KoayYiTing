@@ -67,13 +67,13 @@ Architecture Diagram
 
 Instructions to setup
 =====================
-Microservices Setup:
+Microservices Setup: (can be found under /microservices/ folder) <br>
 Run the following .exe files
 - carowner.exe
 - passenger.exe
 - trip.exe
 
-User Interface Setup:
+User Interface Setup: <br>
 Run the following .exe file
 - console.exe
 From this you can start using the Application
