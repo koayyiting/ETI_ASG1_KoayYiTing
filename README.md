@@ -122,3 +122,33 @@ CREATE TABLE Trip (
     FOREIGN KEY (CarOwnerID) REFERENCES CarOwner(UserID)
 );
 ```
+### Examples to test: (Deletion of Accounts)
+#### Test if Passenger can delete Account (after 1 year)
+Passenger Details: Phone No. = 91010101, Email = koay@gmail.com
+```
+INSERT INTO Passenger (ID, PhoneNumber, Email, FirstName, LastName, registerDT)
+VALUES("550e8400-e29b-41d4-a716-446655440000","91010101", "koay@gmail.com", "Yi Ting", "Koay",DATE_SUB(CURDATE(), INTERVAL 2 YEAR));
+```
+#### Enrolled Passenger can delete Account (after 1 year)
+Passenger Details: Phone No. = 80808080, Email = derick@gmail.com
+```
+INSERT INTO Passenger (ID, PhoneNumber, Email, FirstName, LastName, registerDT)
+VALUES("b81f9ee8-05ed-44fd-9af1-e72bed98467c","80808080", "derick@gmail.com", "Derick", "Lee",DATE_SUB(CURDATE(), INTERVAL 2 YEAR));
+insert into TripPassenger (TripID, PassengerID)
+values("2f192d4a-d722-4520-b66c-6a89796f297e","b81f9ee8-05ed-44fd-9af1-e72bed98467c");
+```
+#### Test if Car Owner Account can delete (have published trip, user have enrolled) 
+CarOwner Details: Phone No. = 88880000, Email = janis@gmail.com <br>
+Passenger Details: Phone No. = 88998899, Email = test@gmail.com <br>
+```
+INSERT INTO Passenger (ID, PhoneNumber, Email, FirstName, LastName, registerDT)
+VALUES("ed2e4494-2837-424b-9dc4-0669bdf8b331","88880000", "janis@gmail.com", "Janis", "Lim",DATE_SUB(CURDATE(), INTERVAL 2 YEAR));
+INSERT INTO CarOwner (UserID, LicenseNo, PlateNo)
+VALUES ('ed2e4494-2837-424b-9dc4-0669bdf8b331', 'ABC123456', 'XYZ789');
+INSERT INTO Trip (TripID, CarOwnerID, PickUpAddress, AlternativeAddress, StartTime, Destination, PaxLimit)
+VALUES ('123e4567-e89b-12d3-a456-426614174001','ed2e4494-2837-424b-9dc4-0669bdf8b331','Chua Chu Kang Avenue 5','Chua Chu Kang Avenue 4','2023-12-17 20:00:00','Jurong East MRT', 4);
+INSERT INTO Passenger (ID, PhoneNumber, Email, FirstName, LastName, registerDT)
+VALUES("492e4ed4-442b-3728-c9d4-8bf39066bd31","88998899", "test@gmail.com", "Shaniah", "Santiago",DATE_SUB(CURDATE(), INTERVAL 2 YEAR));
+insert into TripPassenger (TripID, PassengerID)
+values("123e4567-e89b-12d3-a456-426614174001","492e4ed4-442b-3728-c9d4-8bf39066bd31");
+```
