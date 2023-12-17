@@ -25,7 +25,7 @@ Example: (Login function) <br>
 Scalability                    - Did not have time to test Web service
 
 ### Assumptions:
-System only allows 1 regiested phone number and email <br> <br>
+System only allows 1 registed phone number and email <br> <br>
 Passenger can update account to Car Owner <br>
 Passenger can enrol Trips <br>
 Passenger account can be deleted (after 1 year of registration) and enrolled trips will be deleted <br> <br>
